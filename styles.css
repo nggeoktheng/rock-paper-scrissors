@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4b4c4c;
+    color: #e8eaec;
+    font-family: Roboto, monospace;
+}
+
+header {
+    font-family: Roboto, monospace;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #e8eaec;
+    color: #4b4c4c;
+}
+
+header > p {
+    font-style: italic;
+}
+
+.gameBoard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.score {
+    color: #fefcff;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#version {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.result {
+    font-size: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    border-radius: 50%;
+    background-color: #f2f3f5;
+    cursor: pointer;
+    padding: 40px;
+    margin: 20px 40px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #e3e5e9;
+}
+
+.button:active {
+    box-shadow: 3px 6px 0 10px #e8eaec;
+}
