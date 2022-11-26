@@ -1,3 +1,5 @@
 # rock-paper-scrissors
 
-Emojis credit to emojipedia.org/
+Applying JavaScript concepts to my first JavaScript project.
+
+Emojis credit to: emojipedia.org/
