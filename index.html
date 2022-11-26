@@ -26,13 +26,17 @@
         </div>
 
         <div>
-            <p class="result">Paper beats Rock. Player lose!</p>
+            <p class="result">Start the game!</p>
         </div>
 
         <div class="choices">
-            <button id="rock" class="button"><img src="images/rock.png" alt="rock"></button>
-            <button id="paper" class="button"><img src="images/paper.png" alt="paper"></button>
-            <button id="scissors" class="button"><img src="images/scissors.png" alt="scissors"></button>
+            <button class="button"><img id="rock" src="images/rock.png" alt="rock" draggable="false"></button>
+            <button class="button"><img id="paper" src="images/paper.png" alt="paper" draggable="false"></button>
+            <button class="button"><img id="scissors" src="images/scissors.png" alt="scissors" draggable="false"></button>
+        </div>
+
+        <div class="restart">
+            <button id="restartButton">Restart Game</button>
         </div>
 
         <script src="script.js"></script>
