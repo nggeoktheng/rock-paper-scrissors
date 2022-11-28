@@ -75,16 +75,15 @@ function game() {
 
 function alertMsg() {
     restart.style.visibility = 'visible';
-    restartGame();
+    restartButton.addEventListener('click', restartGame);
+    buttons.forEach(button => button.addEventListener('click', buttonEvent));
 }
 
 function restartGame() {
-    restartButton.addEventListener('click', e => {
-        restart.style.visibility = 'hidden';
+    restart.style.visibility = 'hidden';
         playerScoreAcc = 0;
         computerScoreAcc = 0;
         playerScore.textContent = playerScoreAcc;
         computerScore.textContent = computerScoreAcc;
         result.textContent = 'Start the game!';
-    });
 }
