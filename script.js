@@ -81,9 +81,9 @@ function alertMsg() {
 
 function restartGame() {
     restart.style.visibility = 'hidden';
-        playerScoreAcc = 0;
-        computerScoreAcc = 0;
-        playerScore.textContent = playerScoreAcc;
-        computerScore.textContent = computerScoreAcc;
-        result.textContent = 'Start the game!';
+    playerScoreAcc = 0;
+    computerScoreAcc = 0;
+    playerScore.textContent = playerScoreAcc;
+    computerScore.textContent = computerScoreAcc;
+    result.textContent = 'Start the game!';
 }
