@@ -26,36 +26,40 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        result.textContent = "Player wins! Rock beats Scissors.";
-        playerScoreAcc++;
-        playerScore.textContent = playerScoreAcc;
-    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        result.textContent = "Player wins! Paper beats Rock.";
-        playerScoreAcc++;
-        playerScore.textContent = playerScoreAcc;
-    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        result.textContent = "Player wins! Scissors beats Paper.";
-        playerScoreAcc++;
-        playerScore.textContent = playerScoreAcc;
-    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        result.textContent = "Player loses! Scissors loses to Rock.";
-        computerScoreAcc++;
-        computerScore.textContent = computerScoreAcc;
-    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        result.textContent = "Player loses! Rock loses to Paper.";
-        computerScoreAcc++;
-        computerScore.textContent = computerScoreAcc;
-    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        result.textContent = "Player loses! Paper loses to Scissors.";
-        computerScoreAcc++;
-        computerScore.textContent = computerScoreAcc;
-    } else if (playerSelection === 'rock' && computerSelection === 'rock') {
-        result.textContent = "It's a tie! Rock matches Rock.";
-    } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        result.textContent = "It's a tie! Paper matches Paper.";
+    if (playerScoreAcc === 5 || computerScoreAcc === 5) {
+        return;
     } else {
-        result.textContent = "It's a tie! Scissors matches Scissors.";
+        if (playerSelection === 'rock' && computerSelection === 'scissors') {
+            result.textContent = "Player wins! Rock beats Scissors.";
+            playerScoreAcc++;
+            playerScore.textContent = playerScoreAcc;
+        } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+            result.textContent = "Player wins! Paper beats Rock.";
+            playerScoreAcc++;
+            playerScore.textContent = playerScoreAcc;
+        } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+            result.textContent = "Player wins! Scissors beats Paper.";
+            playerScoreAcc++;
+            playerScore.textContent = playerScoreAcc;
+        } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+            result.textContent = "Player loses! Scissors loses to Rock.";
+            computerScoreAcc++;
+            computerScore.textContent = computerScoreAcc;
+        } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+            result.textContent = "Player loses! Rock loses to Paper.";
+            computerScoreAcc++;
+            computerScore.textContent = computerScoreAcc;
+        } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+            result.textContent = "Player loses! Paper loses to Scissors.";
+            computerScoreAcc++;
+            computerScore.textContent = computerScoreAcc;
+        } else if (playerSelection === 'rock' && computerSelection === 'rock') {
+            result.textContent = "It's a tie! Rock matches Rock.";
+        } else if (playerSelection === 'paper' && computerSelection === 'paper') {
+            result.textContent = "It's a tie! Paper matches Paper.";
+        } else {
+            result.textContent = "It's a tie! Scissors matches Scissors.";
+        }
     }
 }
 
@@ -76,6 +80,7 @@ function game() {
 function alertMsg() {
     restart.style.visibility = 'visible';
     restartButton.addEventListener('click', restartGame);
+    buttons.forEach(button => button.classList.remove('hoverActive', 'cursorBtn'));
     buttons.forEach(button => button.addEventListener('click', buttonEvent));
 }
 

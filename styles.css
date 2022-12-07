@@ -61,22 +61,25 @@ header > p {
     border: none;
     border-radius: 50%;
     background-color: #f2f3f5;
-    cursor: pointer;
     margin: 20px 40px;
     font-size: 15px;
     text-align: center;
     text-decoration: none;
 }
 
+.cursorBtn {
+    cursor: pointer;
+}
+
 .button img {
     padding: 40px;
 }
 
-.button:hover {
+.hoverActive:hover {
     background-color: #e3e5e9;
 }
 
-.button:active {
+.hoverActive:active {
     box-shadow: 3px 6px 0 10px #e8eaec;
 }
 
